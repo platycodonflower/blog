@@ -16,6 +16,12 @@ public class TypeServiceImpl implements TypeService{
     @Autowired
     private TypeRepository typeRepository;
 
+
+    @Override
+    public Type getTypeByName(String name) {
+        return typeRepository.findByName(name);
+    }
+
     @Transactional
     @Override
 //    保存
